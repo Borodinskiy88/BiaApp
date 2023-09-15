@@ -1,23 +1,21 @@
 package ru.borodinskiy.aleksei.biaapp.ui.task
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import ru.borodinskiy.aleksei.biaapp.databinding.FragmentTaskBinding
+import ru.borodinskiy.aleksei.biaapp.R
 import ru.borodinskiy.aleksei.biaapp.databinding.FragmentTaskDetailBinding
 
-class TaskFragment : Fragment() {
+class TaskDetailFragment : Fragment() {
 
-    private lateinit var binding: FragmentTaskBinding
+    private lateinit var binding: FragmentTaskDetailBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentTaskBinding.inflate(inflater, container, false)
+        binding = FragmentTaskDetailBinding.inflate(inflater, container, false)
 
         return binding.root
     }
