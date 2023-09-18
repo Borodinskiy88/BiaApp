@@ -8,7 +8,7 @@
 
     <item
         android:id="@+id/navigation_graph"
-        android:icon="@drawable/baseline_graph_full_24"
+        android:icon="@drawable/ic_graph_24"
         android:title="@string/graph" />
 
     <item

@@ -1,6 +1,11 @@
-package ru.borodinskiy.aleksei.biaapp.ui.dto
+package ru.borodinskiy.aleksei.biaapp.entity
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
 data class Task(
+    @PrimaryKey
     val id: Int,
     val cargoType: String,
     val city: String,

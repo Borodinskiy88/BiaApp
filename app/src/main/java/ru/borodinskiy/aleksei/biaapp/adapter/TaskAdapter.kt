@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.borodinskiy.aleksei.biaapp.databinding.CardTaskBinding
-import ru.borodinskiy.aleksei.biaapp.ui.dto.Task
+import ru.borodinskiy.aleksei.biaapp.entity.Task
 
 interface OnInteractionListener {
     fun onShowDetail(task: Task)

@@ -12,13 +12,15 @@ import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.biaapp.adapter.OnInteractionListener
 import ru.borodinskiy.aleksei.biaapp.adapter.TaskAdapter
 import ru.borodinskiy.aleksei.biaapp.databinding.FragmentTaskBinding
-import ru.borodinskiy.aleksei.biaapp.ui.dto.Task
+import ru.borodinskiy.aleksei.biaapp.entity.Task
+import ru.borodinskiy.aleksei.biaapp.viewmodel.BiaViewModel
+import kotlin.coroutines.suspendCoroutine
 
 @AndroidEntryPoint
 class TaskFragment : Fragment() {
 
     private lateinit var binding: FragmentTaskBinding
-    private val viewModel: TaskViewModel by activityViewModels()
+    private val viewModel: BiaViewModel by activityViewModels()
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: TaskAdapter
 
@@ -39,12 +41,15 @@ class TaskFragment : Fragment() {
 
         })
 
+//        viewModel.insertAll()
+
         recyclerView.adapter = adapter
 
         viewModel.allTask.observe(viewLifecycleOwner) {
 
             adapter.submitList(it)
         }
+
 
         return binding.root
     }
