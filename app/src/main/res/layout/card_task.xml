@@ -16,7 +16,7 @@
         android:layout_marginBottom="@dimen/margin_20">
 
         <TextView
-            android:id="@+id/type"
+            android:id="@+id/cargo_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="?attr/colorSecondary"
@@ -32,9 +32,9 @@
             android:layout_height="wrap_content"
             android:textColor="?attr/colorPrimary"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@id/type"
+            app:layout_constraintBottom_toBottomOf="@id/cargo_type"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/type"
+            app:layout_constraintTop_toTopOf="@id/cargo_type"
             tools:text="Текущее задание" />
 
         <TextView
@@ -44,8 +44,8 @@
             android:layout_marginTop="@dimen/margin_4"
             android:textColor="?attr/colorSecondary"
             android:textSize="17sp"
-            app:layout_constraintStart_toStartOf="@id/type"
-            app:layout_constraintTop_toBottomOf="@id/type"
+            app:layout_constraintStart_toStartOf="@id/cargo_type"
+            app:layout_constraintTop_toBottomOf="@id/cargo_type"
             tools:text="15.09.2023" />
 
         <TextView

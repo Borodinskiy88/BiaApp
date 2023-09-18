@@ -1,6 +1,7 @@
 package ru.borodinskiy.aleksei.biaapp.ui.dto
 
 data class Task(
+    val id: Int,
     val cargoType: String,
     val city: String,
     val date: String,
