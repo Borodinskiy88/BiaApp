@@ -19,4 +19,11 @@
     <string name="task_detail">Детали задания</string>
     <string name="accept">Принять</string>
     <string name="refuse">Отказаться</string>
+    <string name="incident">Инцидент</string>
+    <string name="mistake">Ошибка</string>
+    <string name="docs">Прикрепить документы</string>
+    <string name="finish_task">Завершить заказ</string>
+    <string name="refuse_a_task">Отказаться от задания</string>
+    <string name="headline_success">Работа выполнена</string>
+    <string name="success_text">Задание было выполнено успешно</string>
 </resources>

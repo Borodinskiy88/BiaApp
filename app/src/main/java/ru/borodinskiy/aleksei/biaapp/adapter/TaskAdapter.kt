@@ -47,6 +47,15 @@ class TaskAdapter(
                 detail.text = task.detail
                 paymentParam.text = task.paymentParam
 
+                if (task.complete) {
+                    showDetailButton.isVisible = false
+                    successfulCompletion.isVisible = true
+                }
+
+                if (task.currentTask) {
+                    currentTask.isVisible = true
+                }
+
                 showDetailButton.setOnClickListener {
 
                     onInteractionListener.onShowDetail(task)

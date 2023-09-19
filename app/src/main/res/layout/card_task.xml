@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:textColor="?attr/colorPrimary"
             android:textSize="14sp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@id/cargo_type"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/cargo_type"
@@ -171,6 +172,43 @@
             android:textSize="17sp"
             app:cornerRadius="15dp"
             app:layout_constraintTop_toBottomOf="@id/payment_param" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/successful_completion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12"
+            android:visibility="gone"
+            android:background="@color/light_gray"
+            android:paddingBottom="@dimen/margin_12"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/payment_param">
+
+            <TextView
+                android:id="@+id/headline_success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:textColor="@color/green"
+                android:layout_marginStart="@dimen/activity_horizontal_margin_16"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/headline_success" />
+
+            <TextView
+                android:id="@+id/text_success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:textColor="?attr/colorSecondary"
+                android:layout_marginStart="@dimen/activity_horizontal_margin_16"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headline_success"
+                android:text="@string/success_text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

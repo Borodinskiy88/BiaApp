@@ -14,9 +14,5 @@ interface BiaRepository {
     fun getTaskById(id: Int): LiveData<List<Task>>
 
     suspend fun insert(task: Task)
-//    suspend fun update(task: Task)
-//
-//    suspend fun delete(task: Task)
-//
-//    suspend fun save(task: Task)
+
 }
