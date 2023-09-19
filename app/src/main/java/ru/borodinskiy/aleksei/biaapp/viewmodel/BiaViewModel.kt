@@ -21,33 +21,16 @@ class BiaViewModel @Inject constructor(
 //    val allTask: LiveData<List<Task>> = _allTask
     val allTask = repository.allTask
 
-//    fun insertDb() = repository.insert(listTasks)
+    fun getTaskById(id: Int) = repository.getTaskById(id)
 
-    suspend fun insertAll() = repository.insertAll(listTasks)
-
+    private suspend fun insertAll() = repository.insertAll(listTasks)
     init {
         viewModelScope.launch {
             insertAll()
         }
     }
-//    suspend fun insert() = repository.insert(task)
 
 }
-
-//private val task = Task(
-//    id = 1,
-//    cargoType = "Мебель",
-//    city = "Москва",
-//    date = "15.09.2023",
-//    time = "12:00",
-//    startPoint = "Лесная, 25",
-//    finishPoint = "Фестивальная, 47",
-//    bodyType = "Тентованный",
-//    detail = "Некие, очень важные детали заказа",
-//    paymentParam = "Наличные",
-//    telNumber = "322-223",
-//    name = "Иван Федорович Крузенштерн"
-//)
 
 private val listTasks = listOf(
 

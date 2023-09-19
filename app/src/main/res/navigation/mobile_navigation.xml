@@ -29,6 +29,10 @@
     <fragment
         android:id="@+id/taskDetailFragment"
         android:name="ru.borodinskiy.aleksei.biaapp.ui.task.TaskDetailFragment"
-        android:label="fragment_task_detail"
-        tools:layout="@layout/fragment_task_detail" />
+        android:label="@string/task_detail"
+        tools:layout="@layout/fragment_task_detail" >
+        <action
+            android:id="@+id/action_taskDetailFragment_to_navigation_task"
+            app:destination="@id/navigation_task" />
+    </fragment>
 </navigation>

@@ -14,7 +14,7 @@ import ru.borodinskiy.aleksei.biaapp.entity.Task
 @Dao
 interface BiaDao {
 
-    //TODO заполнение БД
+    //заполнение БД
     @Transaction
     suspend fun insertAll(tasks: List<Task>) {
         tasks.forEach { insert(it) }
@@ -24,14 +24,14 @@ interface BiaDao {
     @Query("SELECT * FROM Task ORDER BY id DESC")
     fun getTasks(): Flow<List<Task>>
     @Query("SELECT * from Task WHERE id = :id")
-    fun getTaskById(id: Int): Flow<Task>
+    fun getTaskById(id: Int): Flow<List<Task>>
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(task: Task)
-    @Update
-    suspend fun update(task: Task)
-    @Delete
-    suspend fun delete(task: Task)
-    @Upsert
-    suspend fun save(task: Task)
+//    @Update
+//    suspend fun update(task: Task)
+//    @Delete
+//    suspend fun delete(task: Task)
+//    @Upsert
+//    suspend fun save(task: Task)
 
 }

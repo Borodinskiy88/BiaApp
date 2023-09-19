@@ -11,13 +11,12 @@ interface BiaRepository {
 
     val allTask: LiveData<List<Task>>
 
-    fun getTaskById(id: Int): LiveData<Task>
-
-    suspend fun update(task: Task)
+    fun getTaskById(id: Int): LiveData<List<Task>>
 
     suspend fun insert(task: Task)
-
-    suspend fun delete(task: Task)
-
-    suspend fun save(task: Task)
+//    suspend fun update(task: Task)
+//
+//    suspend fun delete(task: Task)
+//
+//    suspend fun save(task: Task)
 }
