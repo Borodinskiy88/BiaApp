@@ -26,4 +26,9 @@
     <string name="refuse_a_task">Отказаться от задания</string>
     <string name="headline_success">Работа выполнена</string>
     <string name="success_text">Задание было выполнено успешно</string>
+    <string name="choose_incident">Выберите что произшло</string>
+    <string name="address">Проблема на адресе</string>
+    <string name="path">Проблема в пути</string>
+    <string name="loading">Проблема на загрузке</string>
+    <string name="save">Сохранить</string>
 </resources>

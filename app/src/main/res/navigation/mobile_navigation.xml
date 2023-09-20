@@ -34,5 +34,17 @@
         <action
             android:id="@+id/action_taskDetailFragment_to_navigation_task"
             app:destination="@id/navigation_task" />
+        <action
+            android:id="@+id/action_taskDetailFragment_to_taskIncidentFragment"
+            app:destination="@id/taskIncidentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskIncidentFragment"
+        android:name="ru.borodinskiy.aleksei.biaapp.ui.task.TaskIncidentFragment"
+        android:label="@string/incident"
+        tools:layout="@layout/fragment_task_incident" >
+        <action
+            android:id="@+id/action_taskIncidentFragment_to_taskDetailFragment"
+            app:destination="@id/taskDetailFragment" />
     </fragment>
 </navigation>

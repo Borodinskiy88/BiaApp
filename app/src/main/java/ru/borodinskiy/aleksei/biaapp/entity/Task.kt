@@ -19,5 +19,6 @@ data class Task(
     val telNumber: String,
     val name: String,
     val currentTask: Boolean = false,
-    val complete: Boolean = false
+    val complete: Boolean = false,
+    val textIncident: String = ""
 )

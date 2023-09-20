@@ -1,8 +1,11 @@
 package ru.borodinskiy.aleksei.biaapp
 
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
+import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -38,10 +41,20 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if (destination.id == R.id.taskDetailFragment) {
+            if (destination.id == R.id.taskDetailFragment)  {
                 binding.toolbar.navigationIcon = null
+                binding.navView.isVisible = false
+            } else if (destination.id == R.id.taskIncidentFragment) {
+                binding.toolbar.navigationIcon = null
+                binding.navView.isVisible = false
             }
         }
 
+        //поменять цвет statusbar на белый, а иконки на темные
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.white)
+        WindowCompat.getInsetsController(window, window.decorView).apply {
+            isAppearanceLightStatusBars = true
+        }
     }
 }
