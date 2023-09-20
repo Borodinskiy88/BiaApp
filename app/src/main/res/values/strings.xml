@@ -31,4 +31,6 @@
     <string name="path">Проблема в пути</string>
     <string name="loading">Проблема на загрузке</string>
     <string name="save">Сохранить</string>
+    <string name="choose_variant">Выберите один из вариантов</string>
+    <string name="you_refused_the_task">Вы отказались от задания</string>
 </resources>

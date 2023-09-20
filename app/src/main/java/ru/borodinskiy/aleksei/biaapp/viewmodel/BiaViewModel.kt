@@ -1,7 +1,5 @@
 package ru.borodinskiy.aleksei.biaapp.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,10 +13,6 @@ class BiaViewModel @Inject constructor(
     private val repository: BiaRepositoryImpl
 ) : ViewModel() {
 
-//    private val _allTask = MutableLiveData<List<Task>>().apply {
-//        value = repository.allTask
-//    }
-//    val allTask: LiveData<List<Task>> = _allTask
     val allTask = repository.allTask
 
     fun getTaskById(id: Int) = repository.getTaskById(id)

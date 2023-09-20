@@ -17,7 +17,6 @@ import ru.borodinskiy.aleksei.biaapp.adapter.TaskAdapter
 import ru.borodinskiy.aleksei.biaapp.databinding.FragmentTaskBinding
 import ru.borodinskiy.aleksei.biaapp.entity.Task
 import ru.borodinskiy.aleksei.biaapp.viewmodel.BiaViewModel
-import kotlin.coroutines.suspendCoroutine
 
 @AndroidEntryPoint
 class TaskFragment : Fragment() {

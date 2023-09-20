@@ -30,22 +30,26 @@ class TaskIncidentFragment : Fragment() {
                 radioGroup.setOnCheckedChangeListener { _, checkedId ->
                     when(checkedId) {
                         R.id.radio_button_address -> {
-                            textValue = "Проблема на адресе"
+                            textValue = getString(R.string.address)
                             textIncident.text = textValue
                         }
                         R.id.radio_button_path -> {
-                            textValue = "Проблема в пути"
+                            textValue = getString(R.string.path)
                             textIncident.text = textValue
                         }
                         R.id.radio_button_load -> {
-                            textValue = "Проблема на загрузке"
+                            textValue = getString(R.string.loading)
                             textIncident.text = textValue
                         }
                     }
                 }
             saveButton.setOnClickListener {
                 if (textValue.isBlank()) {
-                    Toast.makeText(requireContext(), "Выберите один из вариантов", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        requireContext(),
+                        getString(R.string.choose_variant),
+                        Toast.LENGTH_LONG
+                    ).show()
                     return@setOnClickListener
                 } else {
                     val bundle = bundleOf(

@@ -17,7 +17,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.biaapp.R
 import ru.borodinskiy.aleksei.biaapp.adapter.TaskDetailAdapter
 import ru.borodinskiy.aleksei.biaapp.databinding.FragmentTaskDetailBinding
-import ru.borodinskiy.aleksei.biaapp.entity.Task
 import ru.borodinskiy.aleksei.biaapp.viewmodel.BiaViewModel
 
 @AndroidEntryPoint
@@ -87,10 +86,10 @@ class TaskDetailFragment : Fragment() {
         }
 
         binding.finishButton.setOnClickListener {
-            //TODO
-            fun completeTask(task: Task): Boolean {
-                return task.complete
-            }
+            binding.incidentButton.isVisible = false
+            binding.taskRefuseButton.isVisible = false
+            binding.finishButton.text = getString(R.string.success_text)
+            findNavController().navigate(R.id.action_taskDetailFragment_to_navigation_task)
         }
 
         binding.incidentButton.setOnClickListener {
@@ -107,7 +106,8 @@ class TaskDetailFragment : Fragment() {
             taskRefuseButton.setOnClickListener {
                 incidentButton.isVisible = false
                 finishButton.isVisible = false
-                taskRefuseButton.text = "Вы отказались от задания"
+                taskRefuseButton.text = getString(R.string.you_refused_the_task)
+                findNavController().navigate(R.id.action_taskDetailFragment_to_navigation_task)
             }
         }
 
